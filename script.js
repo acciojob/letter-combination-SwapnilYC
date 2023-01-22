@@ -4,8 +4,10 @@ function letterCombinations(input_digit) {
   let ans = [];
   let lastDigit = input_digit%10;
   let firstDigit = Math.floor(input_digit/10);
-  let str1 = arr[firstDigit];
-  let str2 = arr[lastDigit];
+  let str1 = String(arr[firstDigit]);
+  console.log(`str1: ${str1}`);
+  let str2 = String(arr[lastDigit]);
+  console.log(`str2: ${str2}`);
 
   for (let i = 0; i < str1.length; i++) {
     let x = String(str1[i]);
@@ -15,11 +17,11 @@ function letterCombinations(input_digit) {
     
   }
   
-  // console.log(ans.sort());
-  return ans.sort();
+  console.log(ans.sort());
+  // return ans.sort();
 }
 
-letterCombinations(32);
+letterCombinations(10);
        
 module.exports = letterCombinations;
 
