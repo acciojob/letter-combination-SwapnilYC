@@ -8,9 +8,9 @@ function letterCombinations(input_digit) {
   let str2 = arr[lastDigit];
 
   for (let i = 0; i < str1.length; i++) {
-    let x = str1[i];
+    let x = String(str1[i]);
     for(let j = 0; j < str2.length; j++){
-      ans.push(`${x}${str2[j]}`);
+      ans.push(`${x}${String(str2[j])}`);
     }
     
   }
